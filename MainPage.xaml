@@ -12,7 +12,7 @@
         
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="78*"/>
             <RowDefinition Height="*"/>
 
 
