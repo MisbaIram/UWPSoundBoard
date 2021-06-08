@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="UWPSoundBoard.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPSoundBoard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+
+        </Grid.RowDefinitions>
+        <RelativePanel Grid.Row="0" Grid.ColumnSpan="2">
+            <Button Name="MyButton">UWPSoundBoard</Button>
+            <Button Name="BurgerButton" Content="&#xE700;" RelativePanel.Below="MyButton"
+                    FontFamily="Segoe MDL2 Assets" Click="BurgerButton_Click"/>
+
+            <Button Name="BackButton" Content="&#xE0A6;" FontFamily="Segoe MDL2 Assets" 
+                    RelativePanel.Below="MyButton" RelativePanel.RightOf="BurgerButton" Click="BackButton_Click">
+            </Button>
+        </RelativePanel>
+        <SplitView Grid.Row="2" Name="UWPSplitView" DisplayMode="CompactOverlay" CompactPaneLength="45" OpenPaneLength="200"></SplitView>
+    </Grid>
+</Page>
